@@ -17,19 +17,20 @@ rollButton.addEventListener(`click`, async function(event) {
   event.preventDefault()
 
   // - Store a random integer in memory, representing the roll of the first die
-  let roll1 = getRandomInt(6)
+  let die1 = getRandomInt(6)
 
   // - Store a random integer in memory, representing the roll of the second die
-  let roll2 = getRandomInt(6)
+  let die2 = getRandomInt(6)
 
   // - Store the total of the two random numbers, representing the total roll
-  let total = roll1 + roll2
+  let total = die1 + die2
 
   // - Replace the first die image using the first random value (hint: setAttribute)
   let die1Element = document.querySelector(`.die1`)
   die1Element.setAttribute(`src`, `../images/dice/${die1}.png`)
   // - Replace the second die image using the second random value (hint: setAttribute)
-
+  let die2Element = document.querySelector(`.die2`)
+  die2Element.setAttribute(`src`, `../images/dice/${die2}.png`)
   // - Store a reference to the player name input element
 
   // - Grab the value of the player name element and store the player's name in memory
