@@ -29,19 +29,19 @@ rollButton.addEventListener(`click`, async function(event) {
   if(roll1 = 1) {
     image.setAttribute(`src`, `../images/1.png`)
   }
-  else if(roll = 2) {
+  else if(roll1 = 2) {
     image.setAttribute(`src`, `../images/2.png`)
   }
-  else if(roll = 3) {
+  else if(roll1 = 3) {
     image.setAttribute(`src`, `../images/3.png`)
   }
-  else if(roll = 4) {
+  else if(roll1 = 4) {
     image.setAttribute(`src`, `../images/4.png`)
   }
-  else if(roll = 5) {
+  else if(roll1 = 5) {
     image.setAttribute(`src`, `../images/5.png`)
   }
-  else {
+  else if (roll1 = 6) {
     image.setAttribute(`src`, `../images/6.png`)
   }
   // - Replace the second die image using the second random value (hint: setAttribute)
