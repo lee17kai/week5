@@ -50,24 +50,40 @@ movieList.insertAdjacentHTML(`beforeend`, `
   <li>Spaceballs</li>`)
 })
 
+//ZOOM IMAGE BUTTON
 // Get a reference to the "zoom inage" button
 let zoomImageButton = document.querySelector(`.zoom-image`)
 
 //Event listener for the "zoom inage button"
 zoomImageButton.addEventListener(`click`, async function(event) {
 
-  // Get a reference to the image
-let image = document.querySelector(`img`)
+    // Get a reference to the image
+  let image = document.querySelector(`img`)
 
-// Add the `border-pink-500` class to the image element
-image.classList.add(`border-pink-500`)
+  // Add the `border-pink-500` class to the image element
+  image.classList.add(`border-pink-500`)
 
-//remove w-96 to w-full when you click button
-image.classList.remove(`w-96`)
-image.classList.add(`w-full`)
+  //remove w-96 to w-full when you click button
+  image.classList.remove(`w-96`)
+  image.classList.add(`w-full`)
 
-//this does something else -- toggles between 
-//image.classList.toggle(`w-96`)
-//image.classList.toggle(`w-full`)
+  //this does something else -- toggles between 
+  //image.classList.toggle(`w-96`)
+  //image.classList.toggle(`w-full`)
+
+})
+
+//CHANGE IMAGE BUTTON
+//Get a reference to the change image button
+let changeImageButton = document.querySelector(`.change-image`)
+
+//Event listener for the change image button
+changeImageButton.addEventListener(`click`, async function(event) {
+  
+  //Get a reference to the image
+  let image = document.querySelector(`img`)
+
+  //Change the image
+  image.setAttribute(`src`, `../images/grogu2.jpg`)
 
 })
