@@ -26,25 +26,8 @@ rollButton.addEventListener(`click`, async function(event) {
   let total = roll1 + roll2
 
   // - Replace the first die image using the first random value (hint: setAttribute)
-  let image = document.querySelector(`.die1`)
-  if(roll1 = 1) {
-    image.setAttribute(`src`, `../images/1.png`)
-  }
-  else if(roll1 = 2) {
-    image.setAttribute(`src`, `../images/2.png`)
-  }
-  else if(roll1 = 3) {
-    image.setAttribute(`src`, `../images/3.png`)
-  }
-  else if(roll1 = 4) {
-    image.setAttribute(`src`, `../images/4.png`)
-  }
-  else if(roll1 = 5) {
-    image.setAttribute(`src`, `../images/5.png`)
-  }
-  else if (roll1 = 6) {
-    image.setAttribute(`src`, `../images/6.png`)
-  }
+  let die1Element = document.querySelector(`.die1`)
+  die1Element.setAttribute(`src`, `../images/dice/${die1}.png`)
   // - Replace the second die image using the second random value (hint: setAttribute)
 
   // - Store a reference to the player name input element
