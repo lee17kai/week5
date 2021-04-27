@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', async function() {
       let currentForecast = json.forecast
 
       // - Continue the recipe yourself!
-      let cityInput = document.querySelector(`.result`)
+      let cityInput = document.querySelector(`.current`)
       cityInput.innerHTML = `
         <div class="text-center space-y-2">
           <div class="font-bold text-3xl">Current Weather for ${currentLocation.name}</div>
@@ -59,5 +59,6 @@ window.addEventListener('DOMContentLoaded', async function() {
           </div>
         </div>`
     }
+    //need to loop through results depeending on how many days people want
   })  
 })
