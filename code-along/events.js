@@ -61,4 +61,8 @@ let image = document.querySelector(`img`)
 // Add the `border-pink-500` class to the image element
 image.classList.add(`border-pink-500`)
 
+//remove w-96 to w-full when you click button
+<image.classList.remove(`w-96`)
+image.classList.add(`w-full`)
+
 })
