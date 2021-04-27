@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', async function() {
       let cityInput = document.querySelector(`.result`)
       cityInput.innerHTML = `
         <div class="text-center space-y-2">
-          <div class="font-bold text-3xl">Current Weather for ${currentLocation}</div>
+          <div class="font-bold text-3xl">Current Weather for ${currentLocation.name}</div>
             <div class="font-bold">
               <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" class="inline-block">
               <span class="temperature">60</span>° 
