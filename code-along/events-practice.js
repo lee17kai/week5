@@ -9,7 +9,7 @@ function getRandomInt(max) {
 // RECIPE (algorithm) – do not modify the HTML!
 
 // Store a reference to the roll button in memory
-let rollButton = document.querySelector(`.roll-button`)
+let rollButton = document.querySelector(`#roll-button`)
 
 // Listen for the clicking of the roll button, when clicked:
 rollButton.addEventListener(`click`, async function(event) {
