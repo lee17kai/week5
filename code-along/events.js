@@ -51,10 +51,10 @@ movieList.insertAdjacentHTML(`beforeend`, `
 })
 
 //ZOOM IMAGE BUTTON
-// Get a reference to the "zoom inage" button
+// Get a reference to the "zoom image" button
 let zoomImageButton = document.querySelector(`.zoom-image`)
 
-//Event listener for the "zoom inage button"
+//Event listener for the "zoom image button"
 zoomImageButton.addEventListener(`click`, async function(event) {
 
     // Get a reference to the image
@@ -86,4 +86,31 @@ changeImageButton.addEventListener(`click`, async function(event) {
   //Change the image
   image.setAttribute(`src`, `../images/grogu2.jpg`)
 
+})
+
+//SAY HI BUTTON
+//Get a reference to the 'say hi button
+let sayHiButton = document.querySelector(`.say-hi`)
+
+//Event listener for say hi button
+sayHiButton.addEventListener(`click`, async function(event) {
+
+  // when you submit a form with no action, changes URL so need to prevent default behavior
+  event.preventDefault()
+
+  //Get a reference to the input field that holds the first name
+  let nameInput = document.querySelector(`#first-name`)
+
+  //Get the value from the input field
+  let firstName = nameInput.value
+  // optional step to check
+  console.log(firstName)
+
+  //Get a reference to the "greet" element
+  let greetElement = document.querySelector(`.greet`)
+
+  //Create a sentence to put in the greet element
+  let sentence = `Hi. ${firstName}!`
+  //Set the greet element's HTML to the sentence
+  greetElement.innerHTML = sentence
 })
