@@ -26,7 +26,7 @@ rollButton.addEventListener(`click`, async function(event) {
   let total = roll1 + roll2
 
   // - Replace the first die image using the first random value (hint: setAttribute)
-  let image = document.querySelector(`die1`)
+  let image = document.querySelector(`.die1`)
   if(roll1 = 1) {
     image.setAttribute(`src`, `../images/1.png`)
   }
