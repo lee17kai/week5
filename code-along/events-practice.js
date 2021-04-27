@@ -31,15 +31,24 @@ rollButton.addEventListener(`click`, async function(event) {
   // - Replace the second die image using the second random value (hint: setAttribute)
   let die2Element = document.querySelector(`.die2`)
   die2Element.setAttribute(`src`, `../images/dice/${die2}.png`)
+
   // - Store a reference to the player name input element
+  let playerNameInput = document.querySelector(`#player`)
 
   // - Grab the value of the player name element and store the player's name in memory
-  
-  // - Make sure the player's name is filled out; if it is:
+  let playerName = playerNameInput.value
 
+  // - Make sure the player's name is filled out; if it is:
+  if(playerName.length > 0){
     // - Form a sentence in memory, containing the player's name and the total that was rolled
+    let sentence = `${playerName} rolled a ${total}`
 
     // - Store a reference to the "result" un-ordered list element
+    let resultList = document.querySelector(`.result`)
 
     // - Insert the sentence to the "result" un-ordered list as a list item (li)
+    resultList.insertAdjacentHTML(`beforeend`, `
+    <li>${sentence}</li>
+    `)
+  }
 })
