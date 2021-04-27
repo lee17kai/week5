@@ -105,7 +105,7 @@ sayHiButton.addEventListener(`click`, async function(event) {
   let firstName = nameInput.value
 
   // optional step to check
-  console.log(firstName)
+  // console.log(firstName)
 
   //Get a reference to the "greet" element
   let greetElement = document.querySelector(`.greet`)
@@ -124,3 +124,5 @@ sayHiButton.addEventListener(`click`, async function(event) {
   }
 
 })
+
+//ALL ANSWERS IN CODE ALONG COMPLETE
