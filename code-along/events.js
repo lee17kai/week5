@@ -48,12 +48,13 @@ let movieList = document.querySelector(`.movies-to-watch`)
 // Add an new list item to the bulleted list of movies
 movieList.insertAdjacentHTML(`beforeend`, `
   <li>Spaceballs</li>`)
-}))
+})
+
 // Get a reference to the "zoom inage" button
 let zoomImageButton = document.querySelector(`.zoom-image`)
 
 //Event listener for the "zoom inage button"
-zoomImageButton.addEventListener(`click`, async function(event {
+zoomImageButton.addEventListener(`click`, async function(event) {
 
   // Get a reference to the image
 let image = document.querySelector(`img`)
@@ -66,7 +67,7 @@ image.classList.remove(`w-96`)
 image.classList.add(`w-full`)
 
 //this does something else -- toggles between 
-image.classList.toggle(`w-96`)
-image.classList.toggle(`w-full`)
+//image.classList.toggle(`w-96`)
+//image.classList.toggle(`w-full`)
 
-}))
+})
