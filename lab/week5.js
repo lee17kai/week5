@@ -47,15 +47,17 @@ window.addEventListener('DOMContentLoaded', async function() {
       let currentForecast = json.forecast
 
       // - Continue the recipe yourself!
-      <div class="text-center space-y-2">
-        <div class="font-bold text-3xl">Current Weather for ${currentLocation}</div>
-          <div class="font-bold">
-            <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" class="inline-block">
-            <span class="temperature">60</span>° 
-            and
-            <span class="conditions">Partly Cloudy</span>
-        </div>
-      </div>
+      let cityInput = document.querySelector(`.result`)
+      cityInput.innerHTML = `
+        <div class="text-center space-y-2">
+          <div class="font-bold text-3xl">Current Weather for ${currentLocation}</div>
+            <div class="font-bold">
+              <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" class="inline-block">
+              <span class="temperature">60</span>° 
+              and
+              <span class="conditions">Partly Cloudy</span>
+          </div>
+        </div>`
     }
   })  
 })
