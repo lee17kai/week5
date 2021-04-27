@@ -54,11 +54,11 @@ let zoomImageButton = document.querySelector(`.zoom-image`)
 
 //Event listener for the "zoom inage button"
 zoomImageButton.addEventListener(`click`, async function(event {
-  
+
   // Get a reference to the image
 let image = document.querySelector(`img`)
 
 // Add the `border-pink-500` class to the image element
 image.classList.add(`border-pink-500`)
 
-}))
+})
