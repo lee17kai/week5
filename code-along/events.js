@@ -103,14 +103,24 @@ sayHiButton.addEventListener(`click`, async function(event) {
 
   //Get the value from the input field
   let firstName = nameInput.value
+
   // optional step to check
   console.log(firstName)
 
   //Get a reference to the "greet" element
   let greetElement = document.querySelector(`.greet`)
 
-  //Create a sentence to put in the greet element
-  let sentence = `Hi. ${firstName}!`
-  //Set the greet element's HTML to the sentence
-  greetElement.innerHTML = sentence
+  //first name should have a value. if it doesn't, shouldn't say anything. 
+  if (firstName.length > 0) {
+
+    //Create a sentence to put in the greet element
+    let sentence = `Hi, ${firstName}!`
+    //Set the greet element's HTML to the sentence
+    greetElement.innerHTML = sentence
+  }
+    //if you put something before, should clear
+  else{
+    greetElement.innerHTML = ``
+  }
+
 })
