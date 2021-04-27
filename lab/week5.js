@@ -23,22 +23,39 @@ window.addEventListener('DOMContentLoaded', async function() {
 
     // - Get a reference to the element containing the user-entered location
     let locationInput = document.querySelector('#location')
-    console.log(locationInput)
 
     // - Get the user-entered location from the element's value
+    let location = locationInput.value
 
     // - Check to see if the user entered anything; if so:
-
+    if(location.length > 0) {
       // - Construct a URL to call the WeatherAPI.com API
+      let url = `https://api.weatherapi.com/v1/forecast.json?key=2b596cf6ba0c404eb2f153901212704&q=${location}&days=3`
 
       // - Fetch the url, wait for a response, store the response in memory
+      let response = await fetch(url)
 
       // - Ask for the json-formatted data from the response, wait for the data, store it in memory
+      let json = await response.json()
 
       // - Write the json-formatted data to the JavaScript console
+      console.log(json)
 
       // - Store the interpreted location, current weather conditions, the forecast as three separate variables
+      let currentLocation = json.location
+      let currentWeather = json.current
+      let currentForecast = json.forecast
 
       // - Continue the recipe yourself!
+      <div class="text-center space-y-2">
+        <div class="font-bold text-3xl">Current Weather for ${currentLocation}</div>
+          <div class="font-bold">
+            <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" class="inline-block">
+            <span class="temperature">60</span>° 
+            and
+            <span class="conditions">Partly Cloudy</span>
+        </div>
+      </div>
+    }
   })  
 })
