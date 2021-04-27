@@ -15,12 +15,15 @@
 
 window.addEventListener('DOMContentLoaded', async function() {
   // Get a reference to the "get weather" button
-
+  let getWeatherButton = document.querySelector(`.get-weather`)
   // When the "get weather" button is clicked:
-
+  getWeatherButton.addEventListener(`click`, async function(event) {
     // - Ignore the default behavior of the button
+    event.preventDefault()
 
     // - Get a reference to the element containing the user-entered location
+    let locationInput = document.querySelector('.location')
+    console.log(locationInput)
 
     // - Get the user-entered location from the element's value
 
@@ -37,4 +40,5 @@ window.addEventListener('DOMContentLoaded', async function() {
       // - Store the interpreted location, current weather conditions, the forecast as three separate variables
 
       // - Continue the recipe yourself!
+  })  
 })
