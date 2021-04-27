@@ -48,7 +48,7 @@ let movieList = document.querySelector(`.movies-to-watch`)
 // Add an new list item to the bulleted list of movies
 movieList.insertAdjacentHTML(`beforeend`, `
   <li>Spaceballs</li>`)
-})
+}))
 // Get a reference to the "zoom inage" button
 let zoomImageButton = document.querySelector(`.zoom-image`)
 
@@ -65,4 +65,4 @@ image.classList.add(`border-pink-500`)
 <image.classList.remove(`w-96`)
 image.classList.add(`w-full`)
 
-})
+}))
