@@ -39,9 +39,9 @@ let addMovieLink = document.querySelector(`.add-movie`)
 // Event listener for the "add movie" link
 addMovieLink.addEventListener(`click`, async function(event) {
 
-  //prevent link's default behavior (which is to go to Google)
+  //prevent link's default behavior (which is to go to Google) needs to happen first
   event.preventDefault()
-  
+
   // Get a reference to the bulleted list of movies
 let movieList = document.querySelector(`.movies-to-watch`)
 
@@ -49,4 +49,16 @@ let movieList = document.querySelector(`.movies-to-watch`)
 movieList.insertAdjacentHTML(`beforeend`, `
   <li>Spaceballs</li>`)
 })
-//
+// Get a reference to the "zoom inage" button
+let zoomImageButton = document.querySelector(`.zoom-image`)
+
+//Event listener for the "zoom inage button"
+zoomImageButton.addEventListener(`click`, async function(event {
+  
+  // Get a reference to the image
+let image = document.querySelector(`img`)
+
+// Add the `border-pink-500` class to the image element
+image.classList.add(`border-pink-500`)
+
+}))
